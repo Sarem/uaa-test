@@ -1,0 +1,26 @@
+video:
+  location: /home/saman/Videos
+#  location: /home/saman/IdeaProjects/uaa-test/spring-cloud-netflix-demo/webflix-streaming-service/videos
+server:
+  port: 8080
+
+spring:
+  application:
+    name: webflix-streaming-service
+
+  thymeleaf:
+    cache: false
+  webflux:
+    static-path-pattern: /**
+logging:
+  level:
+    org.springframework: info
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - metrics
+          - prometheus
+
